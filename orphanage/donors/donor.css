@@ -1,0 +1,254 @@
+/* ===========================
+   GLOBAL PAGE STYLE
+=========================== */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===========================
+   MAIN CARD / CONTAINER
+=========================== */
+.container,
+.form-container {
+    max-width: 1200px;        /* Increased so table fits */
+    width: 95%;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+    backdrop-filter: blur(12px);
+    animation: fadeIn 0.6s ease-in-out;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+.form-container label {
+    display: block;
+    width: 60%;               /* same as input width */
+    max-width: 450px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    text-align: left;         /* label aligned to left */
+}
+
+
+/* ===========================
+   HEADINGS / TITLES
+=========================== */
+h1, h2 {
+    text-align: center;
+    color: #1e293b;
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+    font-size: 42px;
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+}
+
+/* ===========================
+   TABLE STYLING
+=========================== */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    margin-top: 20px;
+}
+
+table th {
+    background: #2563eb;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 0px 0px 0 0;
+}
+
+table tr {
+    background: #ebc402bd;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+table td {
+    padding: 14px;
+    text-align: center;
+    font-size: 15px;
+    color: #222;
+}
+
+table tr:hover {
+    background: #f1f5ff;
+    transition: 0.3s ease;
+}
+
+/* ===========================
+   ACTION LINKS
+=========================== */
+table a {
+    font-weight: 600;
+    text-decoration: none;
+    padding: 4px 8px;
+}
+
+table a:first-child {
+    color: #007bff;
+}
+table a:first-child:hover {
+    color: #0056b3;
+}
+
+table a:nth-child(2) {
+    color: #16a34a;
+}
+table a:nth-child(2):hover {
+    color: #0d7a33;
+}
+
+table a:nth-child(3) {
+    color: #dc2626;
+}
+table a:nth-child(3):hover {
+    color: #b91c1c;
+}
+
+/* ===========================
+   FORM INPUTS
+=========================== */
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 60%;
+    max-width: 450px;
+    padding: 14px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #2563eb;
+    background: white;
+    box-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
+}
+
+/* TEXTAREA SIZE */
+textarea {
+    height: 130px;
+    resize: none;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+button,
+a button {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    font-size: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.25s ease;
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+}
+
+button:hover,
+a button:hover {
+    background: linear-gradient(135deg, #be3fb8, #af1e4e);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(30, 64, 175, 0.4);
+}
+
+/* Buttons center */
+.btn-center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+.btn:hover {
+    background: linear-gradient(135deg, #be3fb8, #af1e4e);
+    transform: translateY(-3px);
+}
+
+.back-btn-wrapper {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* ===========================
+   SUCCESS + ERROR
+=========================== */
+.success-msg,
+.error-msg {
+    max-width: 450px;
+    margin: 0 auto 15px auto;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+}
+.success-msg {
+    background: #d1fae5;
+    color: #065f46;
+}
+.error-msg {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 600px) {
+    input,
+    select,
+    textarea {
+        width: 90%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    table th, table td {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
